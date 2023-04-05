@@ -20,7 +20,7 @@ class Model(nn.Module):
                  activation='ReLU',
                  p=0.0,
                  ):
-        super(Model, self).__init__()
+        super().__init__()
 
         self.n_layers = n_layers
 
@@ -42,7 +42,7 @@ class Model(nn.Module):
         elif activation == 'LeakyReLU':
             self.activation = nn.LeakyReLU(negative_slope=0.1)
         else:
-            raise Exception('{} not an available activation'.format(activation))
+            raise Exception(f'{activation} not an available activation')
 
     def forward(self, x):
         for i in range(self.n_layers-1):

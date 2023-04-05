@@ -166,7 +166,7 @@ class UCB(abc.ABC):
                 n_optimal_arm = np.sum(
                     self.actions[:self.iteration] == self.bandit.best_actions_oracle[:self.iteration]
                 )
-                postfix['% optimal arm'] = '{:.2%}'.format(n_optimal_arm / self.iteration)
+                postfix['% optimal arm'] = f'{n_optimal_arm / self.iteration:.2%}'
 
                 if t % self.throttle == 0:
                     pbar.set_postfix(postfix)

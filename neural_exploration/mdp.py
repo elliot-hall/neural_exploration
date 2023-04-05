@@ -69,7 +69,7 @@ class MDPFeatures():
         elif direction == 'forward':
             self.iteration = 0
         else:
-            raise Exception('Unknown direction {}'.format(direction))
+            raise Exception(f'Unknown direction {direction}')
 
     def reset_features(self):
         """Generate normalized random N(0,1) features phi(s,a)
